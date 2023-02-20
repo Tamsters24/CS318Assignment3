@@ -51,7 +51,7 @@ public class GRHEmployees {
             Stopwatch loadTimer = new Stopwatch();
             double loadTime;
 
-            // SequentialSearchST
+            /*---------------------- SequentialSearchST -----------------------*/
             if (symbolTableType.equals("SequentialSearchST")) {
                 // Symbol Table Load
                 SequentialSearchST<Integer, Employee> employee_st =
@@ -85,7 +85,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else if (symbolTableType.equals("BinarySearchST")) {
+            }
+            /*------------------------- BinarySearchST ------------------------*/
+            else if (symbolTableType.equals("BinarySearchST")) {
                 // Symbol Table Load
                 BinarySearchST<Integer, Employee> employee_st =
                         new BinarySearchST<>();
@@ -118,7 +120,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else if (symbolTableType.equals("BST")) {
+            }
+            /*------------------------------ BST ------------------------------*/
+            else if (symbolTableType.equals("BST")) {
                 // Symbol Table Load
                 BST<Integer, Employee> employee_st =
                         new BST<>();
@@ -151,7 +155,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else if (symbolTableType.equals("RedBlackBST")) {
+            }
+            /*-------------------------- RedBlackBST --------------------------*/
+            else if (symbolTableType.equals("RedBlackBST")) {
                 // Symbol Table Load
                 RedBlackBST<Integer, Employee> employee_st =
                         new RedBlackBST<>();
@@ -176,7 +182,8 @@ public class GRHEmployees {
                         searchTime = searchTimer.elapsedTime();
                         System.out.println("\tquery time : " + searchTime + " seconds");
                         System.out.println("\tEmployee data: " + search);
-                    } else {
+                    }
+                    else {
                         searchTime = searchTimer.elapsedTime();
                         System.out.println("\tquery time : " + searchTime + " seconds");
                         System.out.println("\tEmployee data: No employee record for id " + employeeID);
@@ -184,7 +191,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else if (symbolTableType.equals("SeparateChainingHashST")) {
+            }
+            /*-------------------- SeparateChainingHashST ---------------------*/
+            else if (symbolTableType.equals("SeparateChainingHashST")) {
                 // Symbol Table Load
                 SeparateChainingHashST<Integer, Employee> employee_st =
                         new SeparateChainingHashST<>();
@@ -217,7 +226,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else if (symbolTableType.equals("LinearProbingHashST")) {
+            }
+            /*---------------------- LinearProbingHashST ----------------------*/
+            else if (symbolTableType.equals("LinearProbingHashST")) {
                 // Symbol Table Load
                 LinearProbingHashST<Integer, Employee> employee_st =
                         new LinearProbingHashST<>();
@@ -250,7 +261,9 @@ public class GRHEmployees {
                     System.out.print("\nEnter an employee id to retrieve (-1 to quit): ");
                     employeeID = employeeQuery.nextInt();
                 }
-            } else {
+            }
+            /*----------------------- Incorrect Input -------------------------*/
+            else {
                 System.out.println("ERROR: A bad Symbol Table (ST) criteria" +
                         " argument has been detected\nST NAMES: SequentialSearchST," +
                         " BinarySearchST, BST, RedBlackBST, SeparateChainingHashST," +
@@ -260,6 +273,9 @@ public class GRHEmployees {
             fileScanner.close();
             System.out.println("\nExiting program.");
         }
+        /*---------------------------------------------------------------------*/
+        /*----------------------- Incorrect Args Usage ------------------------*/
+        /*---------------------------------------------------------------------*/
         else
             System.out.println("ERROR: Incorrect command line execution\n" +
                     "USAGE - GRHEmployees has the following command line arguments syntax:\n" +
